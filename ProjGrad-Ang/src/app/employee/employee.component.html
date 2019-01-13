@@ -1,0 +1,32 @@
+<div class="container-fluid">
+<div class="form-group searchbar">
+            <div class="input-group">
+                <div class="input-group-addon search-icon"><i class="glyphicon glyphicon-search"></i></div>
+                <input type="text" class="form-control ng-valid ng-not-empty ng-dirty ng-valid-parse ng-touched" placeholder="Search Employee" [(ngModel)]="searchText">
+            </div>
+        </div>
+
+
+<ul class="list-group">
+    <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
+    <div class="col text-left">Name</div>
+    <div class="col">Gender</div>
+    <div class="col">Race</div>
+    <div class="col pr-4">Position</div>
+    <div class="col">Phone Number</div>
+    <div class="col">Email</div>    
+    </li>
+
+          <li *ngFor="let emp of employees | filter:searchText  " class="list-group-item d-flex justify-content-between">
+          
+           <div class="col text-left">{{emp.user.first_name}} {{emp.user.last_name}}</div>
+           <div class="col">{{emp.gender}}</div>
+           <div class="col">{{emp.race}}</div>
+           <div class="col">{{emp.position?.name}}</div>
+           <div class="col">{{emp.phone_number}}</div>
+           <div class="col">{{emp.email}}</div>
+         </li>
+     </ul>
+
+        </div>
+

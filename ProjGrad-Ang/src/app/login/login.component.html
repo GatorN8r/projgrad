@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row justify-content-md-center">
+    <div class="col-md-4">
+      <h1 class="text-center">Login</h1>
+      <hr><br>
+
+      <form #loginForm="ngForm" (ngSubmit)="onlogin()" name="myForm" novalidate>
+        <div class="form-content">
+          <div class="form-group">
+            <label for="email">Username</label>
+            <input type="text" class="form-control input-underline input-lg" #Username="ngModel" [(ngModel)]="user.Username"  id="username" placeholder="Enter username"
+              name="username" required>
+           
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control input-underline input-lg" #Password="ngModel" [(ngModel)]="user.Password"  id="password" placeholder="Enter password"
+              name="password" required>
+          </div>
+        </div>
+        <button [disabled]="!loginForm.valid" class="btn btn-success my-2 my-sm-0" type="submit">Login</button>
+      </form>
+
+    </div>
+  </div>
+</div>
