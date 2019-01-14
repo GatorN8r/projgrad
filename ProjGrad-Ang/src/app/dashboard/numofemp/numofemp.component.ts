@@ -23,10 +23,7 @@ export class NumofempComponent implements OnInit {
 
 this.emp.getTEmps().subscribe( (res: any) => {
 
-  console.log(res);
-
   res.forEach(element => {
-    console.log(element);
 
     if (element.position) {
 

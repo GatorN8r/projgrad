@@ -1,8 +1,8 @@
 <div class="container-fluid">
 <div class="row justify-content-between">
 <div class="card col-6">
-<h2>{{profile?.user?.first_name}} {{profile?.user?.last_name}}</h2>
-<div class="card-boy">
+<h2></h2>
+<div class="card-body">
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -64,8 +64,7 @@
 
 
         <div class="card col-6">
-<h2>{{profile?.user?.first_name}} {{profile?.user?.last_name}}</h2>
-<div class="card-boy">
+<div class="card-body">
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -106,10 +105,78 @@
       <td>Leaves Remaining</td>
       <td>{{profile?.leave_remaining}}</td>
     </tr>
- 
+
   
   </tbody>
 </table>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  View Review
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Employee Review</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+     <div class="modal-body">
+  <div class="container-fluid">
+    <div class="row">
+      
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th colspan="2"><h5>{{profile?.user?.first_name}} {{profile?.user?.last_name}}</h5></th> 
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Starting Salary</td>
+      <td>{{starting_sal}}</td>    
+    </tr>
+    <tr>
+      <td>Performance Increase</td>
+      <td>{{perfomance_sal}}</td>
+    </tr>
+    <tr>
+      <td>Annual Increase</td>
+      <td>{{annual_inc}}</td>
+    </tr>
+    <tr>
+      <td>Next Review Date</td>
+      <td>{{profile?.next_review}}</td>
+    </tr>
+    <tr>
+      <td>Expectations Review</td>
+      <td>
+      <li>Tackle 5 projects</li>
+      <li>Successfully deliver 3</li>
+      <li>Host a stand-up</li>
+      </td>
+    </tr>
+  
+  </tbody>
+</table>
+
+
+    </div>
+  </div>
+</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
         </div>
         </div>

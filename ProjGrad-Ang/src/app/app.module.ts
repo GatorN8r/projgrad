@@ -16,6 +16,7 @@ import { NumofempComponent } from './dashboard/numofemp/numofemp.component';
 import { BirthdayinfoComponent } from './dashboard/birthdayinfo/birthdayinfo.component';
 import { AuthGuard } from './authGuard/auth.guard';
 import { AuthService } from './_services/auth.service';
+import { EmpposComponent } from './dashboard/emppos/emppos.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { AuthService } from './_services/auth.service';
       NavComponent,
       DashboardComponent,
       NumofempComponent,
+      EmpposComponent,
       BirthdayinfoComponent,
    ],
    imports: [

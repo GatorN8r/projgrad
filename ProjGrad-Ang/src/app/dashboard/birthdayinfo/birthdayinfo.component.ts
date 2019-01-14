@@ -32,10 +32,7 @@ export class BirthdayinfoComponent implements OnInit {
 
 this.emp.getTEmps().subscribe( (res: any) => {
 
-  console.log(res);
-
   res.forEach(element => {
-    console.log(element.birth_date.substring(5, 7));
 
     if (element.birth_date) {
 
