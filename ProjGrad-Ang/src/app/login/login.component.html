@@ -4,21 +4,39 @@
       <h1 class="text-center">Login</h1>
       <hr><br>
 
-      <form #loginForm="ngForm" (ngSubmit)="onlogin()" name="myForm" novalidate>
+      <form [formGroup]="loginForm" (ngSubmit)="onlogin()" name="myForm">
         <div class="form-content">
+
           <div class="form-group">
             <label for="email">Username</label>
-            <input type="text" class="form-control input-underline input-lg" #Username="ngModel" [(ngModel)]="user.Username"  id="username" placeholder="Enter username"
-              name="username" required>
-           
+            <input type="text" 
+            [ngClass]="{'is-invalid': loginForm.get('username').errors && loginForm.get('username').touched}"
+            class="form-control input-underline input-lg"
+            formControlName="username"
+            placeholder="Enter username">
+           <div class="invalid-feedback">Please enter username</div>
           </div>
+          
           <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" class="form-control input-underline input-lg" #Password="ngModel" [(ngModel)]="user.Password"  id="password" placeholder="Enter password"
-              name="password" required>
+            <input type="password"
+             [ngClass]="{'is-invalid': loginForm.get('password').errors && loginForm.get('password').touched}"
+             class="form-control input-underline input-lg"              
+             formControlName="password"
+             placeholder="Enter password" >
+
+            <div class="invalid-feedback" 
+            *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched">Password is required</div>
+
+            <div class="invalid-feedback" 
+            *ngIf="loginForm.get('password').hasError('minlength') && loginForm.get('password').touched">Password must atleast be 4 charcters</div>
+
+            <div class="invalid-feedback" 
+            *ngIf="loginForm.get('password').hasError('maxlength') && loginForm.get('password').touched">Password cannot exceed 20 charcters</div>
+
           </div>
         </div>
-        <button [disabled]="!loginForm.valid" class="btn btn-success my-2 my-sm-0" type="submit">Login</button>
+        <button [disabled]="!loginForm.valid" class="btn btn-success my-2 my-sm-0" type="submit" (click)="cancel()">Login</button>
       </form>
 
     </div>

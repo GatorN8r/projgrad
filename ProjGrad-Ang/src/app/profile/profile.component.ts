@@ -42,7 +42,6 @@ this.rev.getReviews().subscribe(resp => {
 
   resp.forEach(elm => {
 
-console.log(elm);
 
 if (elm.type === 'S') {
   this.starting_sal = elm.salary;

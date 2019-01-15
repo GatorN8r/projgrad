@@ -26,14 +26,17 @@
               "src/styles.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/font-awesome/css/font-awesome.min.css",
-              "./node_modules/datatables.net-dt/css/jquery.dataTables.css"
+              "./node_modules/alertifyjs/build/css/alertify.min.css",
+              "./node_modules/alertifyjs/build/css/themes/bootstrap.min.css"
+              
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.js",
               "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.min.js",
               "./node_modules/chart.js/dist/Chart.bundle.js",
-              "./node_modules/datatables.net/js/jquery.dataTables.js"             
+              "./node_modules/alertifyjs/build/alertify.min.js"
+                           
             ]
           },
           "configurations": {
@@ -91,14 +94,15 @@
               "src/styles.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/font-awesome/css/font-awesome.min.css",
-              "./node_modules/datatables.net-dt/css/jquery.dataTables.css"
+              "./node_modules/alertifyjs/build/css/alertify.min.css",
+              "./node_modules/alertifyjs/build/css/themes/bootstrap.min.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.js",
               "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.min.js",
               "./node_modules/chart.js/dist/Chart.bundle.js",
-              "./node_modules/datatables.net/js/jquery.dataTables.js"  
+              "./node_modules/alertifyjs/build/alertify.min.js"
             ],
             "assets": [
               "src/favicon.ico",

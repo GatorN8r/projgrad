@@ -21,6 +21,7 @@
     "@angular/router": "~7.1.0",
     "@types/datatables.net": "^1.10.14",
     "@types/jquery": "^3.3.29",
+    "alertifyjs": "^1.11.2",
     "angular-datatables": "^7.0.0",
     "bootstrap": "^4.2.1",
     "chart.js": "^2.7.3",

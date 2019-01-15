@@ -17,6 +17,10 @@ import { BirthdayinfoComponent } from './dashboard/birthdayinfo/birthdayinfo.com
 import { AuthGuard } from './authGuard/auth.guard';
 import { AuthService } from './_services/auth.service';
 import { EmpposComponent } from './dashboard/emppos/emppos.component';
+import { ProgressionComponent } from './dashboard/progression/progression.component';
+import { AlertifyService } from './_services/alertify.service';
+import { GendergraphComponent } from './dashboard/gendergraph/gendergraph.component';
+import { ProgressbarsComponent } from './dashboard/progressbars/progressbars.component';
 
 
 @NgModule({
@@ -30,6 +34,9 @@ import { EmpposComponent } from './dashboard/emppos/emppos.component';
       NumofempComponent,
       EmpposComponent,
       BirthdayinfoComponent,
+      ProgressionComponent,
+      ProgressbarsComponent,
+      GendergraphComponent
    ],
    imports: [
       BrowserModule,
@@ -41,7 +48,7 @@ import { EmpposComponent } from './dashboard/emppos/emppos.component';
       Ng2SearchPipeModule
 
    ],
-   providers: [AuthGuard, AuthService],
+   providers: [AuthGuard, AuthService, AlertifyService],
    bootstrap: [
       AppComponent
    ]

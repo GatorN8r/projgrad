@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-  <a class="navbar-brand text-white">Proj_Grad</a>
-   
+  <a *ngIf="!loggedIn()" class="navbar-brand text-white">Proj_Grad</a>
+  <img *ngIf="loggedIn()" class="mr-3" id="logo" src="./../../assets/img/tangentSolLogo.png">
+   <a *ngIf="loggedIn()" routerLink="/dashboard" class="text-white mr-3 text-capitalize nounderline" href="#">dashboard </a>
+   <a *ngIf="loggedIn()" routerLink="/employee" class="text-white text-capitalize nounderline" href="#">employees</a>
     <ul class="navbar-nav mr-auto">
     
     </ul>
@@ -9,8 +11,8 @@
     {{emp?.user?.username}}
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <button routerLink="/profile" class="dropdown-item fa fa-user"  type="button"> My Profile</button>
-    <button  routerLink="/login" class="dropdown-item fa fa-sign-out " (click)="logout()" type="button">Logout</button>
+    <button routerLink="/profile" class="dropdown-item fa fa-user"  type="button" href="#"> My Profile</button>
+    <button  routerLink="/login" class="dropdown-item fa fa-sign-out " (click)="logout()" type="button" href="#">Logout</button>
   </div>
 </div>
     <div  class="dropdown">
